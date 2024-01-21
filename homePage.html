@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage Title</title>
+    <link rel="stylesheet" href="./CSS/styleHome.css"/>
+    <script src="https://kit.fontawesome.com/955bee89bf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="container">    
+        <div class="header">
+            <div class="logo">
+                <img src="./images/logo.png" alt="Logo">
+            </div>
+            <div class="header-right">
+                <div class="topic">
+                    <h3>Topics</h3>
+                </div>
+                <div class="SignIn">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="SignUp">
+                    <h3>Sign Up</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div class="main-content">
+            <div class="info">
+                <h1>Sorting Algorithms</h1>
+                <h2>Ready to Learn <br>Algorithms</br></h2>
+            </div>
+            
+            <div class="form-shape">
+                <h1 id="title">Sign Up</h1>
+                <form>
+                        <div class="input-group">
+                            <div class="input-field" id="fieldName">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" placeholder="Name">
+                            </div>
+        
+                            <div class="input-field">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input type="email" placeholder="Email">
+                            </div>
+        
+                            <div class="input-field">
+                                <i class="fa-solid fa-unlock"></i>
+                                <input type="password" placeholder="Password">
+                            </div>
+        
+                            <div class="input-field" id="confirmPass">
+                                <i class="fa-solid fa-unlock"></i>
+                                <input type="password" placeholder="Confirm Password">
+                            </div>
+                            
+                        <p> Forgot password? <a href="#">Click here!</a></p>
+                        </div>
+                        <div class="btn-field">
+                            <button type="button" id="signupBtn">Sign up</button>
+                            <button type="button" id="signinBtn" class="disable">Sign in</button>
+                        </div>
+        
+                    </form>
+                </div>
+        </div>
+
+        <!-- Footer Section -->
+                <div class="footer">
+                    <div class="footer-content">
+                        <div class="footer-left">
+                            <img src="images/your-image.png" alt="Footer Logo">
+                        </div>
+                        <div class="footer-right">
+                            <div class="social-icons">
+                                <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <div class="copyright">
+                                <p>&copy; 2023 Sorting Algorithms. All rights reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+<script>
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let fieldName = document.getElementById("fieldName");
+let title = document.getElementById("title");
+let confirmPass = document.getElementById("confirmPass");
+
+
+signinBtn.onclick = function() {
+   fieldName.style.maxHeight = "0";
+   confirmPass.style.maxHeight = "0";
+   title.innerHTML = "Sign In";
+   signupBtn.classList.add("disable");
+   signinBtn.classList.remove("disable");
+}
+
+signupBtn.onclick = function() {
+    fieldName.style.maxHeight = "65px";
+    confirmPass.style.maxHeight = "65px";
+    title.innerHTML = "Register";
+    signinBtn.classList.add("disable");
+    signupBtn.classList.remove("disable");
+}
+</script>
+</body>
+</html>
